@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/inscription', 'InscriptionController@formulaire');
+Route::get('/inscription', [InscriptionController::class, 'formulaire']);
 
 Route::post('inscription', [InscriptionController::class, 'inscription'])->name('inscription');
 
